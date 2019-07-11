@@ -19,7 +19,8 @@ import random
 
 def get_player_move():
     """Asks the user to enter a move as 'r', 'p', or 's', and return it"""
-    
+    playerMove = raw_input("Choose your move Rock(r), Paper(p), or Scissors(s): ")
+        return playerMove
     # TODO
 
 

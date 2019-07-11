@@ -13,24 +13,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+print("Welcome to RPS!")
 import random
 
 
 def get_player_move():
-    """Asks the user to enter a move as 'r', 'p', or 's', and return it"""
-    return raw_input("Choose your move [r|p|s]: ").lower()
-
+    playerMove = raw_input("Enter a move Rock(1), Paper(2), Scissors(3): ")
+    return playerMove
 
 def get_computer_move():
-    """Randomly generates the computer's move and
-    returns it in the form of 'r', 'p', or 's'"""
-    return "rps"[random.randint(0,2)]
-
-
+    compMove =  random.randint(1, 6)
+    return compMove
 def determine_winner(player_move, comp_move):
-    """Takes in a player move and computer move each as 'r', 'p', or 's',
-    and returns the winner as 'player', 'computer', or 'tie'"""
     if player_move == comp_move:
         return "tie"
     elif (player_move == "r" and comp_move == "s") or \
@@ -42,15 +36,13 @@ def determine_winner(player_move, comp_move):
 
 
 def print_scoreboard(player_wins, comp_wins, ties):
-    """Prints out the scoreboard neatly.  Returns nothing."""
+
     print("Player Score: %s" % player_wins)
     print("Computer Score: %s" % comp_wins)
     print("Ties: %s" % ties)
 
-
 def get_move_name(short_move):
-    """Takes in 'r', 'p', or 's', and returns 'Rock', 'Paper, or
-    'Scissors' respectively. Use this to neatly print move choices"""
+
     if short_move == 'r':
         return "Rock"
     elif short_move == 'p':
@@ -60,3 +52,9 @@ def get_move_name(short_move):
 
 
 # Write your code below - make RPS happen using the functions above!
+
+print(get_player_move)
+print(compMove)
+print(determine_winner)
+print(scoreboard)
+print(get_move_name)
